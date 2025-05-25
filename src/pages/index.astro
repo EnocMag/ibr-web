@@ -1,26 +1,61 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import NavBar from "@/components/NavBar.astro";
+import { Image } from "astro:assets";
+import logoIBR from "@/assets/Logo-IBR.jpg";
 ---
 
 <style>
+	.title-container {
+		background: #fff;
+		padding: 0 0 50px;
+		font-size: 1.5rem;
+	}
+	.container-img-logo {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		padding: 50px;
+
+		& .logo {
+		border-radius: 20px;
+	}
+}
+
+/* Estilo de contenido parrafos */
+.section-content {
+	display: flex;
+	justify-content: center;
+	width: 600px;
+	margin: 0 auto;
+	
+	& .content-wrapper p {
+		color: #545454;
+		font-family: 'Arial', sans-serif;	
+		font-size: 1.3rem;
+	}
+}
 
 </style>
 
 <BaseLayout title="Iglesia Bautista Reformada" description="Esta es al descripción de mi página principal">
-	<NavBar/>
+	<NavBar></NavBar>
 	<div class="title-container">
-		<h1>Titulo de pagina principal</h1>
+		<h1>Iglesia Bautista Reformada</h1>
 	</div>
-	<p>Esplicación del contenido de esta página</p>
 	
-	//TODO: agregar mapa
+	<div class="container-img-logo">
+		<Image src={logoIBR} alt="Logo de la iglesia" class="logo"/>
+	</div>
+	
+	<section class="section-content">
+		<div class="content-wrapper">
+			<p>La Iglesia Bautista Reformada es una iglesia cristiana que se basa en la enseñanza de la Biblia y la doctrina reformada. Su objetivo es glorificar a Dios y hacer discípulos de Jesucristo a través de la predicación del evangelio, la enseñanza de la Palabra de Dios y el servicio a la comunidad.</p>
+			<p>La iglesia se caracteriza por su compromiso con la verdad bíblica, la adoración centrada en Dios y la vida comunitaria. Los miembros de la iglesia son alentados a crecer en su fe y a vivir de acuerdo con los principios bíblicos en todas las áreas de sus vidas.</p>
+		</div>
+	</section>
 
-	<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In, repudiandae? Architecto suscipit assumenda ducimus maiores? Fugiat pariatur illo voluptatem temporibus, fugit alias vel, nostrum nesciunt nemo quaerat officia molestias accusamus!</p>
-	<p>Dolore rem officiis totam dicta, earum, quibusdam laudantium magni, id ratione repudiandae fuga at recusandae? Sapiente tempora dignissimos corrupti praesentium rem aliquid eius illum eum adipisci, debitis tenetur delectus repellat!</p>
-	<p>Necessitatibus rerum ab omnis voluptas reprehenderit nobis beatae! Maxime perspiciatis illo necessitatibus repudiandae tempore nobis possimus aliquam corporis amet repellendus exercitationem veniam omnis ullam quo, odio quidem eligendi obcaecati! Temporibus?</p>
-	<p>Dignissimos magnam adipisci harum voluptatem? Odio autem qui corporis harum iste quidem error impedit aliquam? Laborum aspernatur amet rem, sint magnam sunt. Facere incidunt accusantium natus accusamus distinctio non dignissimos?</p>
-	<p>Iusto repudiandae, molestias delectus iste esse unde quo deserunt? Nisi ratione eius fugit consequatur impedit placeat beatae, illum repellendus deserunt laudantium nulla reiciendis, quia facilis repellat magni voluptates praesentium sequi?</p>
+	<!-- TODO: agregar mapa -->
 
 	<h1 id="ubicacion">Encuentranos en:</h1>
 	

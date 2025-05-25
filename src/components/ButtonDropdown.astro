@@ -1,0 +1,67 @@
+---
+type MenuItem = {
+  label: string;
+  href?: string;
+};
+
+const { title } = Astro.props;
+const { items = [] }: { items?: MenuItem[] } = Astro.props;
+---
+<style>
+    .wrapper-dropdown a {
+        color: #000;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+
+        &:hover {
+            background: #ddca92;
+            border-radius: 5px;
+            color: #524a32;
+        }
+    }
+
+    /* Menú desplegable */
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+        z-index: 1;
+        
+        & a {
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+
+            &:hover {
+                background-color: #f1f1f1;
+            }
+        }
+    }
+    .wrapper-dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .wrapper-dropdown:hover .dropdown {
+        background: #ddca92;
+        color: #524a32;
+    }
+</style>
+
+<div class="wrapper-dropdown">
+    <a class="dropdown" href="/nosotros/">{title}</a>
+    <div class="dropdown-content">
+        <div id="dropdownMenu" class="">
+            {items.map((item) => (
+                <a href={item.href || "#"}>{item.label}</a>
+            ))}
+      </div> 
+    </div>
+</div>

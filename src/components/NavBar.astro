@@ -1,4 +1,17 @@
 ---
+import ButtonDropdown from "@/components/ButtonDropdown.astro";
+
+// 
+const menuItemsNosotros = [ 
+  { label: 'Historia', href: '/' },
+  { label: 'Misión', href: '/about' },
+  { label: 'Visión', href: '/contact' },
+  { label: 'Credo', href: '/contact' }
+];
+const menuItemsEscuelaDominical = [ 
+  { label: 'Recursos', href: '/' },
+  { label: 'Articulos', href: '/about' }
+];
 ---
 
 <style>
@@ -7,27 +20,29 @@
         margin-top: 0;
         padding: 10px;
         width: 100%;
-        height: 50px;
+        height: 65px;
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: #333;
-        color: white;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
-        border-radius: 0 0 5px 5px;
+        background-color: #fff;
+        color: #000;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
         font-size: 1.2em;
+        font-weight: bold;
     }
     .icon-nav {
         & a {
-            color: white;
+            color: #dbcea8;
+            font-weight: bold;
             text-decoration: none;
-            margin-left: 50px;
+            margin-left: 50px;   
             padding: 0 20px;
+            border-radius: 5px;
             font-size: 2em;
-            background: green;
+            background: #3f5d5c;
 
             &:hover {
-                text-shadow: 0 0 6px rgba(255, 255, 255, 0.5);
+                text-shadow: 0 0 6px #ddca92;
             }
         }
     }
@@ -40,13 +55,52 @@
         gap: 50px;
     }
     .list-menu a {
-        color: white;
+        color: #000;
+        padding: 10px 20px;
         text-decoration: none;
+        border-radius: 5px;
 
         &:hover {
-            text-shadow: 0 0 6px rgba(255, 255, 255, 0.5);
+            background: #ddca92;
+            border-radius: 5px;
+            color: #524a32;
+        } 
+    }
+
+    /* Menú desplegable */
+    /* .dropdown-nosotros {
+        position: relative;
+        display: inline-block;
+    }
+    .dropdown-content-us {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+        z-index: 1;
+        
+        & a {
+            
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+
+            &:hover {
+                background-color: #f1f1f1;
+            }
         }
     }
+    .wrapper-dropdown-us:hover .dropdown-content-us {
+      display: block;
+    }
+
+    .wrapper-dropdown-us:hover .dropdown-nosotros {
+        background: #ddca92;
+        color: #524a32;
+    } */
+
 </style>
 
 <nav class="top-bar">
@@ -55,10 +109,22 @@
         <a class="icon-ibr" href="/">IBR</a>
     </div>
     <div class="list-menu">
-        <a href="/nosotros/">Nosotros</a>
+        
+        <!-- <div class="wrapper-dropdown-us">
+            <a class="dropdown-nosotros" href="/nosotros/">Nosotros</a>
+            <div class="dropdown-content-us">
+                <a href="/nosotros/#historia">Historia</a>
+                <a href="/nosotros/#mision">Misión</a>
+                <a href="/nosotros/#vision">Visión</a>
+                <a href="/nosotros/#credo">Credo</a>
+            </div>
+        </div> -->
+
+        <ButtonDropdown title="Nosotros" items={menuItemsNosotros}></ButtonDropdown> 
         <a href="/servicios/">Servicios</a>
-        <a href="/escuela-dominical/">Escuala Dominical</a>
-        <a href="#ubicacion">Ubicación</a>
+        <!-- <a href="/escuela-dominical/">Escuala Dominical</a> -->
+        <ButtonDropdown title="Escuela Dominical" items={menuItemsEscuelaDominical}></ButtonDropdown> 
+        <a href="/#ubicacion">Ubicación</a>
     </div>
     <!-- <div class="end"></div> -->
 </nav>
