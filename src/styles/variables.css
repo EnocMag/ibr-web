@@ -1,7 +1,14 @@
 :root {
-    --astro-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    --astro-font-size: 16px;
-    --astro-color: #222;
+    --general-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    --general-font-size: 16px;
+    --bg-color: #f0f0f0;
+
+    --text: #333;
     --white: #fff;
-    --red: #ff0000;
+    --ft-color: #f9f9f9;
+    --ibr-green: #3f5d5c;
+    
+    --nav-bg-hover: #ddca92;
+    --nav-bg-hover-text: #524a32;
+    --nav-bg: #ddd;
 }
