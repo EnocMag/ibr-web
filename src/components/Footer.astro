@@ -1,9 +1,18 @@
 ---
+import Logoface from '../assets/facebook.svg';
+import LogoYouTube from '../assets/youtube.svg';
+import LogoInstagram from '../assets/instagram.svg';
 ---
 
 <style>
     footer {
         background: var(--nav-bg);
+    }
+
+    .social-icon {
+        width: 25px;
+        height: 25px;
+        color: var(--ibr-green);
     }
 </style>
 
@@ -11,9 +20,15 @@
 
     <div class="social-follow">
         <h4>Sigenos en:</h4>
-        <a href="https://www.facebook.com/IBRTN/?locale=es_LA" target="_blank"></a>
-        <a href="https://www.youtube.com/@IglesiaBautistaReformada-d1y" target="_blank"></a>
-        <a href="https://www.instagram.com/ibr_tepic/" target="_blank"></a>
+        <a href="https://www.facebook.com/IBRTN/?locale=es_LA" target="_blank">
+            <Logoface class="social-icon" fill="currentColor"/>
+        </a>
+        <a href="https://www.youtube.com/@IglesiaBautistaReformada-d1y" target="_blank">
+            <LogoYouTube class="social-icon" fill="currentColor"/>
+        </a>
+        <a href="https://www.instagram.com/ibr_tepic/" target="_blank">
+            <LogoInstagram class="social-icon" fill="currentColor"/>
+        </a>
     </div>
 
     <div class="contant-area">
