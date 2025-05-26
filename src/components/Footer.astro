@@ -5,44 +5,133 @@ import LogoInstagram from '../assets/instagram.svg';
 ---
 
 <style>
+
     footer {
         background: var(--nav-bg);
+        display: flex;
+        justify-content: space-between;
+
+        & .footer-wrapper {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            padding: 20px;
+            width: 100%;
+            height: 25  0px;
+            max-width: 1200px;
+            margin: 0 auto;
+
+            & p {   
+                margin: 0;
+            }
+
+            & h4 {
+                font-size: 20px;
+            }
+        }
     }
 
-    .social-icon {
-        width: 25px;
-        height: 25px;
-        color: var(--ibr-green);
+    .contact-area {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: var(--text-color);
+
+        & .mail-ibr {
+            text-decoration: none;
+            color: #555;
+            font-weight: bold;
+            margin-top: 10px;
+
+            &:hover {
+                color: var(--ibr-green);
+            }
+        }
     }
+
+    .wrapper-social-ftcopy {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;  
+    }
+
+    .social-follow {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        color: var(--text-color);
+
+        & h4 {
+            margin-bottom: 20px;
+        }
+
+        & .icons-wrapper {
+            display: flex;
+            gap: 40px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .social-icon {
+            width: 25px;
+            height: 25px;
+            color: #555;
+            transition: color 0.3s ease;
+
+            &:hover {
+                color: var(--ibr-green);
+            }
+        }
+    }
+
+    .footer-copy {
+        text-align: center;
+        padding: 10px 0;
+        color: var(--text-color);
+
+        & p {
+            margin: 0;
+        }
+    }
+
 </style>
 
 <footer>
 
-    <div class="social-follow">
-        <h4>Sigenos en:</h4>
-        <a href="https://www.facebook.com/IBRTN/?locale=es_LA" target="_blank">
-            <Logoface class="social-icon" fill="currentColor"/>
-        </a>
-        <a href="https://www.youtube.com/@IglesiaBautistaReformada-d1y" target="_blank">
-            <LogoYouTube class="social-icon" fill="currentColor"/>
-        </a>
-        <a href="https://www.instagram.com/ibr_tepic/" target="_blank">
-            <LogoInstagram class="social-icon" fill="currentColor"/>
-        </a>
-    </div>
+    <div class="footer-wrapper">
+        
+        <div class="contact-area">
+            <h4>Contacto</h4>
+            <p>Iglesia Bautista Reformada</p>
+            <p>Calle: León Sur #82</p>
+            <p>Colonia Centro</p>
+            <p>Entre Abasolo y Mina</p>
+            <a class="mail-ibr" href="mailto:iglesiaibrtepic@gmail.com">iglesiaibrtepic@gmail.com</a>
+        </div>
 
-    <div class="contant-area">
-        <h4>Contacto</h4>
-        <p>Iglesia Bautista Reformada</p>
-        <p>Calle: León Sur #82</p>
-        <p>Colonia Centro</p>
-        <p>Entre Abasolo y Mina</p>
-        <a href="iglesiaibrtepic@gmail.com">iglesiaibrtepic@gmail.com</a>
-    </div>
+        <div class="wrapper-social-ftcopy">
 
-    <div class="footer-copy">
-        <p>&copy; 2025 Iglesia Bautista Reformada</p>
-        <p>Todos los derechos reservados.</p>
-    </div>
+            <div class="social-follow">
+                <h4>Sigenos en</h4>
+                <div class="icons-wrapper">
+                    <a href="https://www.facebook.com/IBRTN/?locale=es_LA" target="_blank">
+                        <Logoface class="social-icon" fill="currentColor"/>
+                    </a>
+                    <a href="https://www.youtube.com/@IglesiaBautistaReformada-d1y" target="_blank">
+                        <LogoYouTube class="social-icon" fill="currentColor"/>
+                    </a>
+                    <a href="https://www.instagram.com/ibr_tepic/" target="_blank">
+                        <LogoInstagram class="social-icon" fill="currentColor"/>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-copy">
+                <p>Copyright    &copy; 2025 Iglesia Bautista Reformada</p>
+                <p>Todos los derechos reservados</p>
+            </div>
 
+        </div>
+    </div>
 </footer>
