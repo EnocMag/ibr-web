@@ -6,12 +6,59 @@ import { Image } from 'astro:assets';
 import CfbIMG from "@/assets/cbf1689.png"
 ---
 
+<style>
+    
+    .cbf-wrapper {
+        margin: 60px;
+        margin-top: 20px;   
+        display: flex;
+        justify-content: center;
+        align-items: start;
+
+        & .img-cbf {
+            height: 600px;
+            width: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    }
+
+    .section-content {
+        display: flex;
+        justify-content: center;
+        width: 600px;
+        margin-left: 50px;
+
+        & .content-wrapper p {
+            color: var(--text);
+            font-size: 1.3rem;
+        }
+
+    }
+
+</style>
+
 <BaseLayout title="IBR Escuela Dominical" description="Esta es al descripción de la página escuela dominical">
     <NavBar></NavBar>
     <div class="title-container">
         <h1>Escuela Dominical</h1>
     </div>
 
-    <Image class="img-cbf" src={CfbIMG} alt="Confesión Bautista de Fe de 1689" />
+    <div class="cbf-wrapper">
+        <Image class="img-cbf" src={CfbIMG} alt="Confesión Bautista de Fe de 1689" />
+
+        <section class="section-content">
+            <div class="content-wrapper">
+                <h2>Confesión Bautista de Fe de 1689</h2>
+                <p>
+                    La Confesión de Fe Bautista de 1689, también conocida como la Segunda Confesión Bautista de Londres, 
+                    es una declaración doctrinal escrita por pastores bautistas reformados en Inglaterra. Su propósito era mostrar que 
+                    compartían muchas creencias fundamentales con otras iglesias protestantes reformadas, especialmente los presbiterianos 
+                    y congregacionalistas, pero con diferencias clave, especialmente en cuanto al bautismo.
+                </p>
+                <a href="/public/Download/CBFL1689.pdf" download>Descarga el PDF</a>
+            </div>
+        </section>
+    </div>
 
 </BaseLayout>
