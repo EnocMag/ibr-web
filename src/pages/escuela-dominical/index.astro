@@ -4,6 +4,7 @@ import NavBar from "@/components/NavBar.astro";
 
 import { Image } from 'astro:assets';
 import CfbIMG from "@/assets/cbf1689.png"
+import CatBau from "@/assets/CatesismoBautista.png";
 ---
 
 <style>
@@ -15,8 +16,8 @@ import CfbIMG from "@/assets/cbf1689.png"
         justify-content: center;
         align-items: start;
 
-        & .img-cbf {
-            height: 600px;
+        & .img-cbf, .img-cat-b {
+            height: 400px;
             width: auto;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -76,7 +77,24 @@ import CfbIMG from "@/assets/cbf1689.png"
                     compartían muchas creencias fundamentales con otras iglesias protestantes reformadas, especialmente los presbiterianos 
                     y congregacionalistas, pero con diferencias clave, especialmente en cuanto al bautismo.
                 </p>
-                <a class="download-btn" href="/public/Download/CBFL1689.pdf" download>Descarga el PDF</a>
+                <a class="download-btn" href="/public/Download/CBFL1689.pdf" download>Descarga gratis PDF</a>
+            </div>
+        </section>
+    </div>
+
+        <div class="cbf-wrapper">
+        <Image class="img-cat-b" src={CatBau} alt="Catesismo Bautista (Edición lectura) Una breve introducción a los principios de la religión cristiana" />
+
+        <section class="section-content">
+            <div class="content-wrapper">
+                <h2>Catesismo Bautista (Edición Lectura)</h2>
+                <p>
+                    El Catecismo Bautista, edición 1693, es una joya de la enseñanza cristiana que ha servido por siglos como guía clara, 
+                    bíblica y profunda para entender y vivir la fe cristiana. Adaptado del Catecismo Menor de Westminster, este catecismo 
+                    refleja fielmente las doctrinas contenidas en la Confesión Bautista de Fe de Londres de 1689, el estándar doctrinal de las 
+                    iglesias bautistas reformadas.
+                </p>
+                <a class="download-btn" href="https://drive.google.com/file/d/1hqUOSYdCYt7kcIlsZLiFZ-vv7hGdylNk/view?usp=drive_link" target="_blank" rel="noopener"><strong>Descarga gratis PDF</strong></a>
             </div>
         </section>
     </div>
