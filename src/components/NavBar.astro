@@ -4,13 +4,13 @@ import ButtonDropdown from "@/components/ButtonDropdown.astro";
 // 
 const menuItemsNosotros = [ 
   { label: 'Historia', href: '/' },
-  { label: 'Misión', href: '/about' },
-  { label: 'Visión', href: '/contact' },
-  { label: 'Credo', href: '/contact' }
+  { label: 'Misión', href: '/' },
+  { label: 'Visión', href: '/' },
+  { label: 'Credo', href: '/' }
 ];
 const menuItemsEscuelaDominical = [ 
-  { label: 'Recursos', href: '/' },
-  { label: 'Articulos', href: '/about' }
+  { label: 'Recursos', href: '/escuela-dominical' },
+  { label: 'Articulos', href: '/' }
 ];
 ---
 
@@ -73,9 +73,9 @@ const menuItemsEscuelaDominical = [
     </div>
 
     <div class="list-menu">
-        <ButtonDropdown title="Nosotros" items={menuItemsNosotros}></ButtonDropdown> 
+        <ButtonDropdown title="Nosotros" items={menuItemsNosotros} href="/nosotros"></ButtonDropdown>
         <a href="/servicios/">Servicios</a>
-        <ButtonDropdown title="Escuela Dominical" items={menuItemsEscuelaDominical}></ButtonDropdown> 
+        <ButtonDropdown title="Escuela Dominical" items={menuItemsEscuelaDominical} href="/escuela-dominical"></ButtonDropdown> 
         <a href="/#ubicacion">Ubicación</a> <!-- TODO dar nuevo link -->
     </div>
 
