@@ -4,7 +4,6 @@ import NavBar from "@/components/NavBar.astro";
 import { Image } from "astro:assets";
 import logoIBR from "@/assets/Logo-IBR.jpg";
 import "../styles/variables.css";
-import Footer from "@/components/Footer.astro";
 ---
 
 <style>
@@ -34,6 +33,20 @@ import Footer from "@/components/Footer.astro";
 	}
 }
 
+.map-ibr {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 50px;
+	
+	& .map-google {
+		border-radius: 10px;
+		&:hover {
+			box-shadow: 0 0 10px 1px #545454;
+		}
+	}
+}
+
 </style>
 
 <BaseLayout title="Iglesia Bautista Reformada" description="Esta es al descripción de mi página principal">
@@ -53,6 +66,11 @@ import Footer from "@/components/Footer.astro";
 		</div>
 	</section>
 
-	<!-- TODO: agregar mapa -->
-	
+	<!-- Mapa de google -->
+	<div id="ubicacion" class="map-ibr">
+		<h2>Encuentranos en</h2>
+		<p>Calle: León Sur #82. Colonia Centro, entre Abasolo y Mina</p>
+		<iframe class="map-google" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d656.1911049989912!2d-104.89712492186342!3d21.508603561691103!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8427370062153127%3A0x73f0515d86f04ad7!2sIglesia%20Bautista%20Reformada!5e0!3m2!1ses-419!2smx!4v1748386541358!5m2!1ses-419!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+	</div>
+
 </BaseLayout>
