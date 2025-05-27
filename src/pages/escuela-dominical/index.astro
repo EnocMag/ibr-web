@@ -7,7 +7,7 @@ import CfbIMG from "@/assets/cbf1689.png"
 ---
 
 <style>
-    
+
     .cbf-wrapper {
         margin: 60px;
         margin-top: 20px;   
@@ -36,6 +36,26 @@ import CfbIMG from "@/assets/cbf1689.png"
 
     }
 
+    .download-btn {
+        text-decoration: none;
+        display: inline-block;
+        margin-top: 20px;
+        padding: 10px 20px;
+        border: solid 2px var(--ibr-green);
+        border-radius: 5px;
+        font-weight: bold; 
+        background-color: #e7e6df;
+        color: var(--ibr-green);
+        -webkit-transition: ease-out 0.4s;
+        -moz-transition: ease-out 0.4s;
+        transition: ease-out 0.4s;
+
+        &:hover {
+            box-shadow: inset 0 0 0 50px var(--ibr-green);
+            color: var(--white);
+        }
+    }
+
 </style>
 
 <BaseLayout title="IBR Escuela Dominical" description="Esta es al descripción de la página escuela dominical">
@@ -56,7 +76,7 @@ import CfbIMG from "@/assets/cbf1689.png"
                     compartían muchas creencias fundamentales con otras iglesias protestantes reformadas, especialmente los presbiterianos 
                     y congregacionalistas, pero con diferencias clave, especialmente en cuanto al bautismo.
                 </p>
-                <a href="/public/Download/CBFL1689.pdf" download>Descarga el PDF</a>
+                <a class="download-btn" href="/public/Download/CBFL1689.pdf" download>Descarga el PDF</a>
             </div>
         </section>
     </div>
