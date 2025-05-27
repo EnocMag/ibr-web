@@ -11,54 +11,6 @@ import Resources from "@/data/resources.json";
 
 <style>
 
-    .cbf-wrapper {
-        margin: 60px;
-        margin-top: 20px;   
-        display: flex;
-        justify-content: center;
-        align-items: start;
-
-        & .img-cbf, .img-cat-b {
-            height: 400px;
-            width: auto;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-    }
-
-    .section-content {
-        display: flex;
-        justify-content: center;
-        width: 600px;
-        margin-left: 50px;
-
-        & .content-wrapper p {
-            color: var(--text);
-            font-size: 1.3rem;
-        }
-
-    }
-
-    .download-btn {
-        text-decoration: none;
-        display: inline-block;
-        margin-top: 20px;
-        padding: 10px 20px;
-        border: solid 2px var(--ibr-green);
-        border-radius: 5px;
-        font-weight: bold; 
-        background-color: #e7e6df;
-        color: var(--ibr-green);
-        -webkit-transition: ease-out 0.4s;
-        -moz-transition: ease-out 0.4s;
-        transition: ease-out 0.4s;
-
-        &:hover {
-            box-shadow: inset 0 0 0 50px var(--ibr-green);
-            color: var(--white);
-        }
-    }
-
 </style>
 
 <BaseLayout title="IBR Escuela Dominical" description="Esta es al descripción de la página escuela dominical">
@@ -70,39 +22,5 @@ import Resources from "@/data/resources.json";
     <div class="resources-container">   
         { Resources.map(resource => <Resource data={resource}></Resource>)}
     </div>
-
-    <!-- <div class="cbf-wrapper">
-        <Image class="img-cbf" src={CfbIMG} alt="Confesión Bautista de Fe de 1689" />
-
-        <section class="section-content">
-            <div class="content-wrapper">
-                <h2>Confesión Bautista de Fe de 1689</h2>
-                <p>
-                    La Confesión de Fe Bautista de 1689, también conocida como la Segunda Confesión Bautista de Londres, 
-                    es una declaración doctrinal escrita por pastores bautistas reformados en Inglaterra. Su propósito era mostrar que 
-                    compartían muchas creencias fundamentales con otras iglesias protestantes reformadas, especialmente los presbiterianos 
-                    y congregacionalistas, pero con diferencias clave, especialmente en cuanto al bautismo.
-                </p>
-                <a class="download-btn" href="/public/Download/CBFL1689.pdf" download>Descarga gratis PDF</a>
-            </div>
-        </section>
-    </div> -->
-
-    <!-- <div class="cbf-wrapper">
-        <Image class="img-cat-b" src={CatBau} alt="Catesismo Bautista (Edición lectura) Una breve introducción a los principios de la religión cristiana" />
-
-        <section class="section-content">
-            <div class="content-wrapper">
-                <h2>Catesismo Bautista (Edición Lectura)</h2>
-                <p>
-                    El Catecismo Bautista, edición 1693, es una joya de la enseñanza cristiana que ha servido por siglos como guía clara, 
-                    bíblica y profunda para entender y vivir la fe cristiana. Adaptado del Catecismo Menor de Westminster, este catecismo 
-                    refleja fielmente las doctrinas contenidas en la Confesión Bautista de Fe de Londres de 1689, el estándar doctrinal de las 
-                    iglesias bautistas reformadas.
-                </p>
-                <a class="download-btn" href="https://drive.google.com/file/d/1hqUOSYdCYt7kcIlsZLiFZ-vv7hGdylNk/view?usp=drive_link" target="_blank" rel="noopener"><strong>Descarga gratis PDF</strong></a>
-            </div>
-        </section>
-    </div> -->
 
 </BaseLayout>
