@@ -1,0 +1,65 @@
+---
+const { data } = Astro.props;
+---
+
+<style>
+    .resource-container {
+        margin: 60px;
+        margin-top: 20px;   
+        display: flex;
+        justify-content: center;
+        align-items: start;
+
+        & .img-res {
+            height: 400px;
+            width: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    }
+    .section-content {
+        display: flex;
+        justify-content: center;
+        width: 600px;
+        margin-left: 50px;
+
+        & .content-wrapper p {
+            color: var(--text);
+            font-size: 1.3rem;
+        }
+
+    }
+    .download-btn {
+        text-decoration: none;
+        display: inline-block;
+        margin-top: 20px;
+        padding: 10px 20px;
+        border: solid 2px var(--ibr-green);
+        border-radius: 5px;
+        font-weight: bold; 
+        background-color: #e7e6df;
+        color: var(--ibr-green);
+        -webkit-transition: ease-out 0.4s;
+        -moz-transition: ease-out 0.4s;
+        transition: ease-out 0.4s;
+
+        &:hover {
+            box-shadow: inset 0 0 0 50px var(--ibr-green);
+            color: var(--white);
+        }
+    }
+</style>
+
+<div class="resource-container">
+    <!-- <Image class="img-res" src={data.image} alt={data.title} />  -->
+    <img class="img-res" src={data.image} alt={data.title}> 
+    <section class="section-content">
+        <div class="content-wrapper">
+            <h2>{data.title}</h2>
+            <p>
+                {data.description}
+            </p>
+            <a class="download-btn" href={data.href} download target="_blank" rel="noopener">Descarga gratis PDF</a>
+        </div>
+    </section>
+</div>

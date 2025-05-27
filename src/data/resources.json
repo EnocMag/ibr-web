@@ -1,0 +1,14 @@
+[
+  {
+    "title": "Confesión Bautista de Fe de 1689",
+    "href": "/Download/CBFL1689.pdf",
+    "description": "La Confesión de Fe Bautista de 1689, también conocida como la Segunda Confesión Bautista de Londres, es una declaración doctrinal escrita por pastores bautistas reformados en Inglaterra. Su propósito era mostrar que compartían muchas creencias fundamentales con otras iglesias protestantes reformadas, especialmente los presbiterianos y congregacionalistas, pero con diferencias clave, especialmente en cuanto al bautismo.",
+    "image": "../src/assets/cbf1689.png"
+  },
+  {
+    "title": "Catesismo Bautista (Edición lectura)",
+    "href": "https://drive.google.com/file/d/1hqUOSYdCYt7kcIlsZLiFZ-vv7hGdylNk/view?usp=drive_link",
+    "description": "El Catecismo Bautista, edición 1693, es una joya de la enseñanza cristiana que ha servido por siglos como guía clara, bíblica y profunda para entender y vivir la fe cristiana. Adaptado del Catecismo Menor de Westminster, este catecismo refleja fielmente las doctrinas contenidas en la Confesión Bautista de Fe de Londres de 1689, el estándar doctrinal de las iglesias bautistas reformadas.",
+    "image": "../src/assets/CatesismoBautista.png"
+  }
+]

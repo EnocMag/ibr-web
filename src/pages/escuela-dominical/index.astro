@@ -3,8 +3,10 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 import NavBar from "@/components/NavBar.astro";
 
 import { Image } from 'astro:assets';
-import CfbIMG from "@/assets/cbf1689.png"
-import CatBau from "@/assets/CatesismoBautista.png";
+// import CfbIMG from "@/assets/cbf1689.png"
+// import CatBau from "@/assets/CatesismoBautista.png";
+import Resource from "@/components/Resource.astro";
+import Resources from "@/data/resources.json";
 ---
 
 <style>
@@ -65,7 +67,11 @@ import CatBau from "@/assets/CatesismoBautista.png";
         <h1>Escuela Dominical</h1>
     </div>
 
-    <div class="cbf-wrapper">
+    <div class="resources-container">   
+        { Resources.map(resource => <Resource data={resource}></Resource>)}
+    </div>
+
+    <!-- <div class="cbf-wrapper">
         <Image class="img-cbf" src={CfbIMG} alt="Confesión Bautista de Fe de 1689" />
 
         <section class="section-content">
@@ -80,9 +86,9 @@ import CatBau from "@/assets/CatesismoBautista.png";
                 <a class="download-btn" href="/public/Download/CBFL1689.pdf" download>Descarga gratis PDF</a>
             </div>
         </section>
-    </div>
+    </div> -->
 
-        <div class="cbf-wrapper">
+    <!-- <div class="cbf-wrapper">
         <Image class="img-cat-b" src={CatBau} alt="Catesismo Bautista (Edición lectura) Una breve introducción a los principios de la religión cristiana" />
 
         <section class="section-content">
@@ -97,6 +103,6 @@ import CatBau from "@/assets/CatesismoBautista.png";
                 <a class="download-btn" href="https://drive.google.com/file/d/1hqUOSYdCYt7kcIlsZLiFZ-vv7hGdylNk/view?usp=drive_link" target="_blank" rel="noopener"><strong>Descarga gratis PDF</strong></a>
             </div>
         </section>
-    </div>
+    </div> -->
 
 </BaseLayout>
