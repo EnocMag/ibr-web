@@ -7,7 +7,18 @@ import Resources from "@/data/resources.json";
 ---
 
 <style>
-
+.section-content {
+	display: flex;
+	justify-content: center;
+	width: 600px;
+	margin: 0 auto;
+	
+	& .content-wrapper p {
+		color: #545454;
+		font-family: 'Arial', sans-serif;	
+		font-size: 1.3rem;
+	}
+}
 </style>
 
 <BaseLayout title="IBR Escuela Dominical" description="Esta es al descripción de la página escuela dominical">
@@ -15,6 +26,11 @@ import Resources from "@/data/resources.json";
     <div class="title-container">
         <h1>Escuela Dominical</h1>
     </div>
+    <section class="section-content">
+        <div class="content-wrapper">
+            <p>En nuestra iglesia otorgamos un alto valor a la escuela dominical, considerándola una herramienta importante para la enseñanza bíblica sistemática y la formación doctrinal de toda la congregación.</p>
+        </div>
+    </section>
 
     <div class="resources-container">   
         { Resources.map(resource => <Resource data={resource}></Resource>)}
