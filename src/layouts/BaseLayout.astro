@@ -3,6 +3,7 @@ const { title, description } = Astro.props;
 import "../styles/reset.css";
 import "../styles/variables.css";
 import Footer from "../components/Footer.astro";
+import BtnScrollTop from "@/components/BtnScrollTop.astro";
 ---
 
 <html lang="en">
@@ -16,7 +17,8 @@ import Footer from "../components/Footer.astro";
 	</head>
 	<body>
 		<slot/>
-		<Footer />
+		<Footer/>
+		<BtnScrollTop/>
 	</body>
 </html>
 
