@@ -1,0 +1,39 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import NavBar from "@/components/NavBar.astro";
+
+import Resource from "@/components/Resource.astro";
+import Ress from "@/data/resources.json";
+---
+
+<style>
+.section-content {
+	display: flex;
+	justify-content: center;
+	width: 670px;
+	margin: 0 auto;
+	
+	& .content-wrapper p {
+		color: #545454;
+		font-family: 'Arial', sans-serif;	
+		font-size: 1.3rem;
+	}
+}
+</style>
+
+<BaseLayout title="IBR Escuela Dominical Recursos" description="Esta es al descripción de la página escuela dominical"> <!-- TODO mejorar descripción -->
+    <NavBar></NavBar>
+    <div class="title-container">
+        <h1>Recursos</h1>
+    </div>
+    <section class="section-content">
+        <div class="content-wrapper">
+            <p>Es de nuestro agrado facilitarle los recursos necesarios para nuestros estudios de la Palabra en la escuela dominical, y proporcionarle las herramientas para un aprendizaje bíblico sistemático y doctrinalmente profundo, por medio de credos y confesiones históricamente sostenidos.</p>
+        </div>
+    </section>
+
+    <div class="resources-container">   
+        { Ress.map(resource => <Resource data={resource}></Resource>)}
+    </div>
+
+</BaseLayout>
