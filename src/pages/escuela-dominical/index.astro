@@ -2,8 +2,8 @@
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import NavBar from "@/components/NavBar.astro";
 
-import Resource from "@/components/Resource.astro";
-import Resources from "@/data/resources.json";
+// import Resource from "@/components/Resource.astro";
+// import Resources from "@/data/resources.json";
 ---
 
 <style>
@@ -32,8 +32,8 @@ import Resources from "@/data/resources.json";
         </div>
     </section>
 
-    <div class="resources-container">   
-        { Resources.map(resource => <Resource data={resource}></Resource>)}
-    </div>
+    <!-- <div class="resources-container">   
+        { Resources.map(resource => <Resource data={resource}></Resource>)} 
+    </div> -->
 
 </BaseLayout>
