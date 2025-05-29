@@ -3,7 +3,7 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 import NavBar from "@/components/NavBar.astro";
 import { Image } from "astro:assets";
 //import logoIBR from "@/assets/Logo-IBR.jpg";
-import bible from "@/assets/bible2.jpg";
+import bible from "@/assets/bible.webp";
 import "../styles/variables.css";
 ---
 
@@ -30,7 +30,7 @@ import "../styles/variables.css";
 
 		& .filter {
 			position: absolute;
-			width: 1400px;
+			max-width: 1400px;
 			height: 500px;
 			background: rgba(0, 0, 0, 0.5);
 			border-radius: 20px;
@@ -55,15 +55,17 @@ import "../styles/variables.css";
 				display: inline-block;
 				margin-top: 20px;
 				padding: 10px 20px;
-				background-color: #007bff;
-				border: solid 1px #007bff;
-				color: white;
+				background-color: #93d2d0;
+				border: solid 1px #93d2d0;
+				color: #1b2b3a;
+				font-weight: bold;
 				border-radius: 5px;
 				font-size: 1.2rem;
 				transition: background-color 0.3s ease;
 				
 				&:hover {
 					background-color: var(--ibr-green);
+					color: #fff;
 					border: solid 1px #fff;
 				}
 			}
@@ -77,11 +79,16 @@ import "../styles/variables.css";
 	justify-content: center;
 	width: 670px;
 	margin: 0 auto;
+	margin-top: 50px;
+
 	
 	& .content-wrapper p {
 		color: #545454;
 		font-size: 1.3rem;
 	}
+}
+h2 {
+	font-size: 2rem;
 }
 
 .map-ibr {
@@ -106,20 +113,22 @@ import "../styles/variables.css";
 	<!-- Slider -->
 	<div class="slaider-container">
 		<div class="container-img-bible">
-			<Image src={bible} alt="Imagen de la Biblia" class="bible" />
+			<Image src={bible} alt="Imagen de la Biblia" class="bible" width={1400} height={500}/> 
+			<!-- <img src="/src/assets/bible.webp" alt="imagen de la Biblia" class="bible" /> -->
 			<!-- Filter -->
 			<div class="filter"></div>
 			<!-- Título del slider -->
 			<div class="title-slider">
 				<p>Bienvenido a la</p>
 				<h1>Iglesia Bautista Reformada</h1>
-				<a href="#ubicacion" class="button">Explorar más</a>
+				<a href="/nosotros" class="button">Explorar más</a>
 			</div>
 		</div>
 	</div>
 	
 	<section class="section-content">
 		<div class="content-wrapper">
+			<h2>Comprometidos con la verdad biblica</h2>
 			<p>La Iglesia Bautista Reformada es una iglesia cristiana que se basa en la enseñanza de la Biblia y la doctrina reformada. Su objetivo es glorificar a Dios y hacer discípulos de Jesucristo a través de la predicación del evangelio, la enseñanza de la Palabra de Dios y el servicio a la comunidad.</p>
 			<p>La iglesia se caracteriza por su compromiso con la verdad bíblica, la adoración centrada en Dios y la vida comunitaria. Los miembros de la iglesia son alentados a crecer en su fe y a vivir de acuerdo con los principios bíblicos en todas las áreas de sus vidas.</p>
 		</div>
@@ -129,7 +138,7 @@ import "../styles/variables.css";
 	<div id="ubicacion" class="map-ibr">
 		<h2>Encuentranos en</h2>
 		<p>Calle: León Sur #82. Colonia Centro, entre Abasolo y Mina</p>
-		<iframe title="Localización Iglesia Bautista Reformada" class="map-google" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d656.1911049989912!2d-104.89712492186342!3d21.508603561691103!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8427370062153127%3A0x73f0515d86f04ad7!2sIglesia%20Bautista%20Reformada!5e0!3m2!1ses-419!2smx!4v1748386541358!5m2!1ses-419!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+		<iframe title="Localización Iglesia Bautista Reformada" class="map-google" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d656.1911049989912!2d-104.89712492186342!3d21.508603561691103!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8427370062153127%3A0x73f0515d86f04ad7!2sIglesia%20Bautista%20Reformada!5e0!3m2!1ses-419!2smx!4v1748386541358!5m2!1ses-419!2smx" width="1400" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 	</div>
 
 </BaseLayout>
