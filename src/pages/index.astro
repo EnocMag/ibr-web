@@ -2,22 +2,74 @@
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import NavBar from "@/components/NavBar.astro";
 import { Image } from "astro:assets";
-import logoIBR from "@/assets/Logo-IBR.jpg";
+//import logoIBR from "@/assets/Logo-IBR.jpg";
+import bible from "@/assets/bible2.jpg";
 import "../styles/variables.css";
 ---
 
 <style>
+	.slaider-container {
+		position: relative;
+		
+		& .container-img-bible {
+			width: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding-top: 90px;
+			
+			
+			& .bible {
+				width: 1400px;
+				height: 500px;
+				border-radius: 20px;
+				object-fit: cover;
+				object-position: center;
+			}
+		}
 
-	.container-img-logo {
-		width: 100%;
-		display: flex;
-		justify-content: center;
-		padding: 50px;
+		& .filter {
+			position: absolute;
+			width: 1400px;
+			height: 500px;
+			background: rgba(0, 0, 0, 0.5);
+			border-radius: 20px;
+			z-index: 1; /* Asegura que el filtro esté por encima de la imagen */
+		}
 
-		& .logo {
-		border-radius: 20px;
+		& .title-slider {
+			position: absolute;
+			text-align: center;
+			margin-top: -100px;
+			color: #fff;
+			/* font-family: 'Arial', sans-serif; */
+			font-size: 2.5rem;
+			z-index: 2; /* Asegura que el texto esté por encima del filtro */
+
+			& p {
+				margin-bottom: 0;
+			}
+
+			& a {
+				text-decoration: none;
+				display: inline-block;
+				margin-top: 20px;
+				padding: 10px 20px;
+				background-color: #007bff;
+				border: solid 1px #007bff;
+				color: white;
+				border-radius: 5px;
+				font-size: 1.2rem;
+				transition: background-color 0.3s ease;
+				
+				&:hover {
+					background-color: var(--ibr-green);
+					border: solid 1px #fff;
+				}
+			}
+		}
 	}
-}
+
 
 /* Estilo de contenido parrafos */
 .section-content {
@@ -28,7 +80,6 @@ import "../styles/variables.css";
 	
 	& .content-wrapper p {
 		color: #545454;
-		font-family: 'Arial', sans-serif;	
 		font-size: 1.3rem;
 	}
 }
@@ -51,12 +102,20 @@ import "../styles/variables.css";
 
 <BaseLayout title="Iglesia Bautista Reformada" description="Esta es al descripción de mi página principal">
 	<NavBar></NavBar>
-	<div class="title-container">
-		<h1>Bienvenido a la Iglesia Bautista Reformada</h1>
-	</div>
 	
-	<div class="container-img-logo">
-		<Image src={logoIBR} alt="Logo de la iglesia" class="logo"/>
+	<!-- Slider -->
+	<div class="slaider-container">
+		<div class="container-img-bible">
+			<Image src={bible} alt="Imagen de la Biblia" class="bible" />
+			<!-- Filter -->
+			<div class="filter"></div>
+			<!-- Título del slider -->
+			<div class="title-slider">
+				<p>Bienvenido a la</p>
+				<h1>Iglesia Bautista Reformada</h1>
+				<a href="#ubicacion" class="button">Explorar más</a>
+			</div>
+		</div>
 	</div>
 	
 	<section class="section-content">
@@ -70,7 +129,7 @@ import "../styles/variables.css";
 	<div id="ubicacion" class="map-ibr">
 		<h2>Encuentranos en</h2>
 		<p>Calle: León Sur #82. Colonia Centro, entre Abasolo y Mina</p>
-		<iframe class="map-google" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d656.1911049989912!2d-104.89712492186342!3d21.508603561691103!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8427370062153127%3A0x73f0515d86f04ad7!2sIglesia%20Bautista%20Reformada!5e0!3m2!1ses-419!2smx!4v1748386541358!5m2!1ses-419!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+		<iframe title="Localización Iglesia Bautista Reformada" class="map-google" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d656.1911049989912!2d-104.89712492186342!3d21.508603561691103!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8427370062153127%3A0x73f0515d86f04ad7!2sIglesia%20Bautista%20Reformada!5e0!3m2!1ses-419!2smx!4v1748386541358!5m2!1ses-419!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 	</div>
 
 </BaseLayout>
