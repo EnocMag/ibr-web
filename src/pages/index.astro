@@ -2,7 +2,6 @@
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import NavBar from "@/components/NavBar.astro";
 import { Image } from "astro:assets";
-//import logoIBR from "@/assets/Logo-IBR.jpg";
 import bible from "@/assets/bible.webp";
 import "../styles/variables.css";
 ---
@@ -17,7 +16,6 @@ import "../styles/variables.css";
 			justify-content: center;
 			align-items: center;
 			padding-top: 90px;
-			
 			
 			& .bible {
 				width: 1400px;
@@ -42,7 +40,6 @@ import "../styles/variables.css";
 			text-align: center;
 			margin-top: -100px;
 			color: #fff;
-			/* font-family: 'Arial', sans-serif; */
 			font-size: 2.5rem;
 			z-index: 2; /* Asegura que el texto esté por encima del filtro */
 
@@ -114,7 +111,6 @@ h2 {
 	<div class="slaider-container">
 		<div class="container-img-bible">
 			<Image src={bible} alt="Imagen de la Biblia" class="bible" width={1400} height={500}/> 
-			<!-- <img src="/src/assets/bible.webp" alt="imagen de la Biblia" class="bible" /> -->
 			<!-- Filter -->
 			<div class="filter"></div>
 			<!-- Título del slider -->
