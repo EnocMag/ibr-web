@@ -30,7 +30,7 @@ import "../styles/variables.css";
 				width: 100%;
 				max-width: 1400px;
 				height: 500px;
-				background: rgba(0, 0, 0, 0.5);
+				background: rgba(100, 86, 25, 0.5);
 				border-radius: 20px;
 				z-index: 2; /* Asegura que el filtro esté por encima de la imagen */
 			}
@@ -77,9 +77,10 @@ import "../styles/variables.css";
 .section-content {
 	display: flex;
 	justify-content: center;
-	width: 670px;
+	max-width: 1300px;
 	margin: 0 auto;
 	margin-top: 50px;
+	padding: 10px;
 
 	& .content-wrapper p {
 		color: #545454;
@@ -103,6 +104,18 @@ h2 {
 		&:hover {
 			box-shadow: 0 0 10px 1px #545454;
 		}
+	}
+}
+
+@media screen and (max-width: 990px) {
+	body {
+		font-size: 14px;
+	}
+	.title-slider h1 {
+		font-size: 60px;
+	}
+	.title-slider p {
+		font-size: 30px;
 	}
 }
 
