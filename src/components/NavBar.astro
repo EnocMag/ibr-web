@@ -21,7 +21,7 @@ const menuItemsEscuelaDominical = [
 ---
 
 <style>
-
+/* 
     .top-bar-cotainer {
         position: fixed;
         margin-top: 0;
@@ -96,15 +96,87 @@ const menuItemsEscuelaDominical = [
                 color: var(--ibr-green);
             }
         }
+    } */
+
+    .top-bar-container {
+        display: flex;
+        justify-content: center;
+        
+        & .top-bar {
+            position: fixed;
+            display: flex;
+            justify-content: space-evenly; /* Distribuye las secciones */
+            align-items: center;            /* Centra verticalmente */
+            gap: 30px;
+            background-color: #929292;
+            color: white;
+            z-index: 1000;
+
+            .icon-container {
+                padding-left: 20px;
+
+                & .icon-nav {
+                    display: block;
+                    width: 50px;
+                    
+                    & .logo {
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 50%;
+                    }
+                }
+            }
+            
+
+            & .list-menu {
+                
+                display: flex;
+                gap: 15px;
+
+                & a {
+                    color: #000;
+                    padding: 10px 20px;
+                    text-decoration: none;
+                    border-radius: 5px;
+
+                    &:hover {
+                        background: var(--nav-bg-hover);
+                        border-radius: 5px;
+                        color: var(--nav-bg-hover-text);
+                    } 
+                }
+            }
+
+            
+            & .icons-wrapper {
+                display: flex;
+                gap: 40px;
+                justify-content: center;
+                align-items: center;
+                padding-right: 20px;
+
+                & .social-icon {
+                    width: 25px;
+                    height: 25px;
+                    color: #555;
+                    transition: color 0.3s ease;
+
+                    &:hover {
+                        color: var(--ibr-green);
+                    }
+                }
+            }
+        }
     }
+
 </style>
 
-<div class="top-bar-cotainer">
+<div class="top-bar-container">
     <nav class="top-bar">
 
         <!-- TODO icon nav var -->
-        <div class="icon-nav" >
-            <a href="/" class="home">
+        <div class="icon-container">
+            <a href="/" class="icon-nav">
                 <Image src={logoIBR} alt="Logo de la iglesia" class="logo"/>
             </a>
         </div>
@@ -117,19 +189,19 @@ const menuItemsEscuelaDominical = [
             <a href="/#ubicacion">Ubicación</a> <!-- TODO dar nuevo link -->
         </div>
 
-        <div class="social">
-                <div class="icons-wrapper">
-                    <a href="https://www.facebook.com/IBRTN/?locale=es_LA" target="_blank">
-                        <Logoface class="social-icon" fill="currentColor"/>
-                    </a>
-                    <a href="https://www.youtube.com/@IglesiaBautistaReformada-d1y" target="_blank">
-                        <LogoYouTube class="social-icon" fill="currentColor"/>
-                    </a>
-                    <a href="https://www.instagram.com/iglesiabautistareformadaibr/" target="_blank">
-                        <LogoInstagram class="social-icon" fill="currentColor"/>
-                    </a>
-                </div>
+        
+        <div class="icons-wrapper">
+            <a href="https://www.facebook.com/IBRTN/?locale=es_LA" target="_blank">
+                <Logoface class="social-icon" fill="currentColor"/>
+            </a>
+            <a href="https://www.youtube.com/@IglesiaBautistaReformada-d1y" target="_blank">
+                <LogoYouTube class="social-icon" fill="currentColor"/>
+            </a>
+            <a href="https://www.instagram.com/iglesiabautistareformadaibr/" target="_blank">
+                <LogoInstagram class="social-icon" fill="currentColor"/>
+            </a>
         </div>
+        
 
     </nav>
 </div>
