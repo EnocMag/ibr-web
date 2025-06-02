@@ -3,10 +3,33 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 import NavBar from "@/components/NavBar.astro";
 ---
 
+<style>
+    
+</style>
+
 <BaseLayout title="Nuestros servicios" description="Esta es al descripción de la página Nosotros">
     <NavBar></NavBar>
     <div class="title-container">
         <h1>Nuestros Servicios</h1>
     </div>
-    <p>Esplicación del contenido de esta página</p>
+    <p>Te invitamos a unirte a nosotros en nuestros tiempos de adoración y enseñanza.</p>
+    <h2>Domingo</h2>
+    <ul>
+        <li>
+            <span class="service">Escuela Dominical:</span>
+            <p>9:30 am</p>
+            <p>(Clases para todas las edades)</p>
+        </li>
+        <li>
+            <span class="service">Culto general:</span>
+            <p>11:00 am</p>
+        </li>
+    </ul>
+    <h2>Miércoles</h2>
+    <ul>
+        <li>
+            <span class="service">Culto de Oración:</span>
+            <p>7:00 pm</p>
+        </li>
+    </ul>
 </BaseLayout>
