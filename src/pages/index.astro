@@ -18,8 +18,8 @@ import "../styles/variables.css";
 			padding-top: 90px;
 			
 			& .bible {
-				width: 1400px;
-				height: 500px;
+				width: 1000px;
+				height: 400px;
 				border-radius: 20px;
 				object-fit: cover;
 				object-position: center;
@@ -28,11 +28,13 @@ import "../styles/variables.css";
 			& .filter {
 				position: absolute;
 				width: 100%;
-				max-width: 1400px;
-				height: 500px;
-				background: #33333396 ;
+				max-width: 1000px;
+				height: 400px;
 				border-radius: 20px;
+				margin: 20px;
+				background: #33333396 ;
 				z-index: 2; /* Asegura que el filtro esté por encima de la imagen */
+
 			}
 
 			& .title-slider {
@@ -40,11 +42,15 @@ import "../styles/variables.css";
 				text-align: center;
 				margin-top: -100px;
 				color: #fff;
-				font-size: 2.5rem;
 				z-index: 2; /* Asegura que el texto esté por encima del filtro */
-	
+				
 				& p {
+					font-size: 2rem;
 					margin-bottom: 0;
+				}
+
+				& h1 {
+					font-size: 48px;
 				}
 	
 				& a {
@@ -68,8 +74,6 @@ import "../styles/variables.css";
 				}
 			}
 		}
-		
-
 	}
 
 
@@ -77,7 +81,7 @@ import "../styles/variables.css";
 .section-content {
 	display: flex;
 	justify-content: center;
-	max-width: 1300px;
+	max-width: 795px;
 	margin: 0 auto;
 	margin-top: 50px;
 	padding: 10px;
@@ -95,12 +99,16 @@ h2 {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	margin: 50px;
+	margin: 20px;
+	margin-bottom: 50px;
 	
 	& .map-google {
 		border-radius: 10px;
 		width: 100%;
-		max-width: 1400px;
+		min-width: none;
+		max-width: 1000px;
+		height: 400px;
+		
 		&:hover {
 			box-shadow: 0 0 10px 1px #545454;
 		}
@@ -127,7 +135,7 @@ h2 {
 	<!-- Slider -->
 	<div class="slider-container">
 		<div class="container-img-bible">
-			<Image src={bible} alt="Imagen de la Biblia" class="bible" width={1400} height={500}/> 
+			<Image src={bible} alt="Imagen de la Biblia" class="bible" width={1000} height={400}/> 
 			<!-- Filter -->
 			<div class="filter"></div>
 			<!-- Título del slider -->
@@ -151,7 +159,7 @@ h2 {
 	<div id="ubicacion" class="map-ibr">
 		<h2>Encuentranos en</h2>
 		<p>Calle: León Sur #82. Colonia Centro, entre Abasolo y Mina</p>
-		<iframe title="Localización Iglesia Bautista Reformada" class="map-google" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d656.1911049989912!2d-104.89712492186342!3d21.508603561691103!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8427370062153127%3A0x73f0515d86f04ad7!2sIglesia%20Bautista%20Reformada!5e0!3m2!1ses-419!2smx!4v1748386541358!5m2!1ses-419!2smx" width="1400" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+		<iframe title="Localización Iglesia Bautista Reformada" class="map-google" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d656.1911049989912!2d-104.89712492186342!3d21.508603561691103!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8427370062153127%3A0x73f0515d86f04ad7!2sIglesia%20Bautista%20Reformada!5e0!3m2!1ses-419!2smx!4v1748386541358!5m2!1ses-419!2smx" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 	</div>
 
 </BaseLayout>

@@ -1,18 +1,56 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import NavBar from "@/components/NavBar.astro";
+import { Image } from "astro:assets";
+import ibrWorship from "@/assets/ibr-worship.png";
 ---
 
 <style>
+
+    .slider-container {
+        position: relative;
+        
+        & .container-img-bible {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 90px;
+            
+            & .bible {
+                width: 1000px;
+                height: 400px;
+                border-radius: 20px;
+                object-fit: cover;
+                object-position: center;
+            }
+
+            /* & .filter {
+                position: absolute;
+                width: 100%;
+                max-width: 1400px;
+                height: 500px;
+                background: #33333396 ;
+                border-radius: 20px;
+                z-index: 2; 
+            } */
+        }
+    }
+	
     .section-content {
         display: flex;
-        justify-content: center;
-        max-width: 1300px;
+        flex-direction: column;
+        align-items: center;
+        max-width: 795px;
         margin: 0 auto;
         margin-top: 50px;
         padding: 10px;
 
-	& .content-wrapper p {
+        & .title {
+            color: var(--ibr-green);
+        }
+
+	    & .content-wrapper p {
             color: #545454;
             font-size: 1.3rem;
         }
@@ -21,14 +59,32 @@ import NavBar from "@/components/NavBar.astro";
 
 <BaseLayout title="IBR Nosotros" description="Esta es al descripción de la página Nosotros">
     <NavBar></NavBar>
-    <div class="title-container">
-        <h1>Nosotros</h1>
-    </div>
-    <div class="section-content">
-        <div class="content-wrapper">
-            <p>En nuestra iglesia local desde sus inicios (no sin errores) hemos tenido la convicción de que lo más importante para nuestro crecimiento en la fe y el conocimiento de Dios es la predicación fiel de la Palabra. Estamos convencidos de que ella es todo suficiente para la salvación y santificación de todo aquel que cree, para la gloria de Dios y nuestro deleite.</p>
-            <p>Esto a su vez, no como una iglesia que se aísla de la historia, sino que se edifica de lo que otros cristianos fieles a la Palabra de Dios edificaron. Por ello nos adherimos a la segunda confesión bautista de Londres de 1689.</p>
-            <p>Tampoco pretendemos aislarnos de los tiempos en los que por la voluntad de Dios vivimos, ni de la cultura que por la misma voluntad pertenecemos. Por ello pretendemos y pedimos sabiduría para que como iglesia podamos dar respuestas fieles a la Palabra de Dios y a la historia de la iglesia en nuestro propio contexto.</p>
+
+    <!-- Slider -->
+	<div class="slider-container">
+        <div class="container-img-bible">
+            <Image src={ibrWorship} alt="Imagen de la Biblia" class="bible" width={1000} height={400}/> 
+			<!-- Filter -->
+			<!-- <div class="filter"></div> -->
+			<!-- Título del slider -->
+			<!-- <div class="title-slider">
+                    <p>Bienvenido a la</p>
+                    <h1>Iglesia Bautista Reformada</h1>
+                    <a href="/nosotros" class="button">Explorar más</a>
+                </div> -->
         </div>
     </div>
+
+    
+    <div class="section-content">
+        <div class="title">
+            <h1>Nosotros</h1>
+        </div>
+        <div class="content-wrapper">
+            <p>En nuestra iglesia local, desde sus inicios, hemos estado convencidos (a pesar de los errores que puedan haber surgido en el camino) de que lo más crucial para nuestro crecimiento en la fe y el conocimiento de Dios es la predicación fiel y central de Su Palabra. Estamos convencidos de que ella es todo suficiente para la salvación y santificación de todo aquel que cree, para la gloria de Dios y nuestro deleite.</p>
+            <p>Nuestra iglesia no busca vivir aislada de la historia de la fe, sino que se edifica sobre los cimientos sólidos que otros cristianos fieles a la Palabra de Dios han dejado a lo largo de los siglos. Es por esta razón que nos adherimos a la Segunda Confesión Bautista de Londres de 1689, reconociendo la importancia de los principios doctrinales que allí se expresan.</p>
+            <p>De igual manera, no pretendemos aislarnos de los tiempos en los que por la voluntad de Dios vivimos, ni de la cultura que por la misma voluntad pertenecemos. Por ello pretendemos y pedimos sabiduría para que como iglesia podamos dar respuestas fieles a la Palabra de Dios y a la historia de la iglesia en nuestro propio contexto.</p>
+        </div>
+    </div>
+
 </BaseLayout>
