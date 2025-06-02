@@ -10,30 +10,20 @@ import ibrWorship from "@/assets/ibr-worship.png";
     .slider-container {
         position: relative;
         
-        & .container-img-bible {
+        & .container-img-slider {
             width: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
             padding-top: 90px;
             
-            & .bible {
+            & .nosotros-slider {
                 width: 1000px;
                 height: 400px;
                 border-radius: 20px;
                 object-fit: cover;
                 object-position: center;
             }
-
-            /* & .filter {
-                position: absolute;
-                width: 100%;
-                max-width: 1400px;
-                height: 500px;
-                background: #33333396 ;
-                border-radius: 20px;
-                z-index: 2; 
-            } */
         }
     }
 	
@@ -62,16 +52,8 @@ import ibrWorship from "@/assets/ibr-worship.png";
 
     <!-- Slider -->
 	<div class="slider-container">
-        <div class="container-img-bible">
-            <Image src={ibrWorship} alt="Imagen de la Biblia" class="bible" width={1000} height={400}/> 
-			<!-- Filter -->
-			<!-- <div class="filter"></div> -->
-			<!-- Título del slider -->
-			<!-- <div class="title-slider">
-                    <p>Bienvenido a la</p>
-                    <h1>Iglesia Bautista Reformada</h1>
-                    <a href="/nosotros" class="button">Explorar más</a>
-                </div> -->
+        <div class="container-img-slider">
+            <Image src={ibrWorship} alt="Imagen de la Biblia" class="nosotros-slider" width={1000} height={400}/> 
         </div>
     </div>
 
