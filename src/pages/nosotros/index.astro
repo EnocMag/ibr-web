@@ -3,10 +3,32 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 import NavBar from "@/components/NavBar.astro";
 ---
 
+<style>
+    .section-content {
+        display: flex;
+        justify-content: center;
+        max-width: 1300px;
+        margin: 0 auto;
+        margin-top: 50px;
+        padding: 10px;
+
+	& .content-wrapper p {
+            color: #545454;
+            font-size: 1.3rem;
+        }
+    }
+</style>
+
 <BaseLayout title="IBR Nosotros" description="Esta es al descripción de la página Nosotros">
     <NavBar></NavBar>
     <div class="title-container">
         <h1>Nosotros</h1>
     </div>
-    <p>Esplicación del contenido de esta página</p>
+    <div class="section-content">
+        <div class="content-wrapper">
+            <p>En nuestra iglesia local desde sus inicios (no sin errores) hemos tenido la convicción de que lo más importante para nuestro crecimiento en la fe y el conocimiento de Dios es la predicación fiel de la Palabra. Estamos convencidos de que ella es todo suficiente para la salvación y santificación de todo aquel que cree, para la gloria de Dios y nuestro deleite.</p>
+            <p>Esto a su vez, no como una iglesia que se aísla de la historia, sino que se edifica de lo que otros cristianos fieles a la Palabra de Dios edificaron. Por ello nos adherimos a la segunda confesión bautista de Londres de 1689.</p>
+            <p>Tampoco pretendemos aislarnos de los tiempos en los que por la voluntad de Dios vivimos, ni de la cultura que por la misma voluntad pertenecemos. Por ello pretendemos y pedimos sabiduría para que como iglesia podamos dar respuestas fieles a la Palabra de Dios y a la historia de la iglesia en nuestro propio contexto.</p>
+        </div>
+    </div>
 </BaseLayout>
