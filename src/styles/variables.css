@@ -6,9 +6,33 @@
     --text: #333;
     --white: #fff;
     --ft-color: #f9f9f9;
-    --ibr-green: #5a8281;
+    --ibr-green: #2B485A;
     
     --nav-bg-hover: #ddca92;
     --nav-bg-hover-text: #524a32;
     --nav-bg: #ddd;
+
+    --primary-100: #C0DBF1;
+    --primary-200: #75B8E2;
+    --primary-300: #5B90B3;
+    --primary-400: #426B85;
+    --primary-500: #2B485A;
+    --primary-600: #152733;
+    --primary-700: #071219;
+
+    --secundary-100: #F9EFEA;
+    --secundary-200: #EED0C2;
+    --secundary-300: #E2A077;
+    --secundary-400: #B37D5B;
+    --secundary-500: #855C42;
+    --secundary-600: #5A3D2A;
+    --secundary-700: #322015;
+
+    --grey-100: #D5D8DA;
+    --grey-200: #ACB1B4;
+    --grey-300: #878B8E;
+    --grey-400: #646769;
+    --grey-500: #434546;
+    --grey-600: #242626;
+    --grey-700: #101111;
 }
