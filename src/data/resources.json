@@ -3,24 +3,24 @@
     "title": "Confesión Bautista de Fe de 1689",
     "href": "/Download/CBFL1689.pdf",
     "description": "La Confesión de Fe Bautista de 1689, también conocida como la Segunda Confesión Bautista de Londres, es una declaración doctrinal escrita por pastores bautistas reformados en Inglaterra. Su propósito era mostrar que compartían muchas creencias fundamentales con otras iglesias protestantes reformadas, especialmente los presbiterianos y congregacionalistas, pero con diferencias clave, especialmente en cuanto al bautismo.",
-    "image": "../src/assets/cbf1689.png"
+    "image": "../src/assets/cbf1689.jpg"
   },
   {
     "title": "Catesismo Bautista (Edición lectura)",
     "href": "https://drive.google.com/file/d/1hqUOSYdCYt7kcIlsZLiFZ-vv7hGdylNk/view?usp=drive_link",
     "description": "El Catecismo Bautista, edición 1693, es una joya de la enseñanza cristiana que ha servido por siglos como guía clara, bíblica y profunda para entender y vivir la fe cristiana. Adaptado del Catecismo Menor de Westminster, este catecismo refleja fielmente las doctrinas contenidas en la Confesión Bautista de Fe de Londres de 1689, el estándar doctrinal de las iglesias bautistas reformadas.",
-    "image": "../src/assets/CatesismoBautista.png"
+    "image": "../src/assets/CatesismoBautista.jpg"
   },
   {
     "title": "Catesismo Menor de Westminster",
     "href": "/Download/CMW.pdf",
     "description" : "El Catecismo Menor de Westminster es un documento doctrinal elaborado en 1647 por la Asamblea de Westminster, convocada por el Parlamento inglés. Fue diseñado para enseñar los principios básicos del cristianismo reformado de una manera clara y sistemática, especialmente dirigido a los niños y personas nuevas en la fe. Su formato es de preguntas y respuestas, lo que facilita la memorización y el aprendizaje.",
-    "image" : "../src/assets/CatMenWE.png"
+    "image" : "../src/assets/CatMenWE.jpg"
   },
   {
     "title": "La carrera de la fe",
     "href": "/Download/La Carrera de la Fe - R. C. Sproul.pdf",
     "description" : "En nuestra iglesia, valoramos profundamente el acto del bautismo como una expresión pública de fe y compromiso con Jesucristo. Para acompañarte en este camino, utilizamos el libro La carrera de la fe, una guía clara y accesible que explora el Credo de los Apóstoles, también conocido como el símbolo apostólico. Este credo, que resume las verdades fundamentales del evangelio, ha sido confesado por cristianos a lo largo de los siglos. A través de sus capítulos, este recurso te ayudará a comprender mejor en qué crees, por qué lo crees, y cómo vivir de acuerdo con esa fe. Ya sea que estés dando tus primeros pasos en la vida cristiana o profundizando en tu caminar con Dios, este libro será una herramienta valiosa en tu preparación para el bautismo.",
-    "image" : "../src/assets/LaCarreraDeLaFe.png"
+    "image" : "../src/assets/LaCarreraDeLaFe.jpg"
   }
 ]
