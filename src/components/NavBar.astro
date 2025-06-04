@@ -20,6 +20,9 @@ const menuItemsEscuelaDominical = [
 ];
 ---
 
+
+
+
 <style>
     
     .top-bar-container {
@@ -55,7 +58,6 @@ const menuItemsEscuelaDominical = [
             
 
             & .list-menu {
-                
                 display: flex;
                 gap: 15px;
 
@@ -73,6 +75,51 @@ const menuItemsEscuelaDominical = [
                 }
             }
 
+            & .dropdown-menu {
+                display: none;
+                margin-right: 20px;
+
+                & .menu-icon {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    width: 30px;
+                    height: 20px;
+                    cursor: pointer;
+                    transition: transform 0.3s ease;
+                    
+                    & div {
+                        width: 100%;
+                        height: 4px;
+                        background-color: var(--primary-500);
+                        border-radius: 4px;
+                        transition: transform 0.3s ease;
+                    }
+                    
+                    &.open div:nth-child(1) {
+                        transform: rotate(45deg);
+                        position: relative;
+                        top: 8px;
+                    }
+                    &.open div:nth-child(2) {
+                        opacity: 0;
+                    }
+                    &.open div:nth-child(3) {
+                        transform: rotate(-45deg);
+                        position: relative;
+                        top: -8px;
+                    }
+                }
+            }
+
+            @media screen and (max-width: 800px) {
+                .dropdown-menu {
+                    display: block;
+                }
+                .list-menu {
+                    display: none;
+                }
+            }
             
             /* & .icons-wrapper {
                 display: flex;
@@ -93,14 +140,13 @@ const menuItemsEscuelaDominical = [
                 }
             } */
         }
-    }
+    }    
 
 </style>
 
 <div class="top-bar-container">
     <nav class="top-bar">
 
-        
         <div class="icon-container">
             <a href="/" class="icon-nav">
                 <Image src={logoIBR} alt="Logo de la iglesia" class="logo"/>
@@ -115,6 +161,13 @@ const menuItemsEscuelaDominical = [
             <a href="/#ubicacion">Ubicación</a> <!-- TODO dar nuevo link -->
         </div>
 
+        <div class="dropdown-menu">
+            <div class="menu-icon" onclick="toggleMenu(this)">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
 
         <!-- <div class="icons-wrapper">
             <a href="https://www.facebook.com/IBRTN/?locale=es_LA" target="_blank">
@@ -128,6 +181,12 @@ const menuItemsEscuelaDominical = [
             </a>
         </div> -->
 
-
     </nav>
 </div>
+
+<script>
+const dropdownMenuIcon = document.querySelector(".menu-icon");
+if (dropdownMenuIcon) {
+  dropdownMenuIcon.addEventListener("click", () => dropdownMenuIcon.classList.toggle("open"));
+}
+</script>   
