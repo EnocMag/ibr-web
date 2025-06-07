@@ -8,6 +8,18 @@ import bastaDeMi from "@/assets/basta-ya-de-mi.jpg";
 ---
 
 <style>
+    :root {
+        --base-width: 600px;
+        --base-height: 800px;
+
+        /* Unidades relativas según viewport */
+        --vw: 1vw;
+        --vh: 1vh;
+
+        /* Escala base de unidad derivada de base-width (puedes ajustar) */
+        --unit: calc(var(--base-width) / 100);
+    }
+
     p {
         margin: 0;
         padding: 0;
@@ -99,9 +111,10 @@ import bastaDeMi from "@/assets/basta-ya-de-mi.jpg";
         align-items: center;
         gap: 20px;
 
+
         & .container {
-            width: 800px;
-            height: 1000px;
+            width: 600px;
+            height: 800px;
             margin: 0 auto;
             background: var(--primary-100);
             border-radius: 10px;
@@ -118,7 +131,7 @@ import bastaDeMi from "@/assets/basta-ya-de-mi.jpg";
                 transform: translate(265px, -2px);
                 
                 & .padre-hijo {
-                    height: 800px;
+                    height: 600px;
                 }
                 
             }
@@ -127,29 +140,29 @@ import bastaDeMi from "@/assets/basta-ya-de-mi.jpg";
                 position: absolute;
                 z-index: -2;
                 right: 0;
-                transform: translate(160px, -95px);
+                transform: translate(120px, -95px);
 
                 & .girl-mirror {
-                    height: 960px;
+                    height: 720px;
                 }
             }
             
             &::before {
                 content: "";
-                width: 800px;
-                height: 1000px;
+                width: 600px;
+                height: 750px;
                 position: absolute;
                 background: #eee;
-                transform: rotate(-25deg) translate(-170px, 0px);
+                transform: rotate(-25deg) translate(-130px, 0px);
                 z-index: -1;
             }
             
             & .wrapper {
-                margin-top: 100px;
+                margin-top: 60px;
                 padding: 40px;
                 
                 & .title {
-                    font-size: 2rem;
+                    font-size: 1.5rem;
                     color: #fff;
                     background: #111;
                     display: inline-block;
@@ -158,10 +171,10 @@ import bastaDeMi from "@/assets/basta-ya-de-mi.jpg";
                 & .info-event {
                 
                     & .book-name {
-                        font-size: 4rem;
+                        font-size: 3rem;
                         font-weight: bold;
-                        width: 350px;
-                        line-height: .7;
+                        width: 300px;
+                        line-height: .8;
                         padding: 15px 0;
                         margin: 0;
                         margin-top: 10px;
@@ -195,12 +208,11 @@ import bastaDeMi from "@/assets/basta-ya-de-mi.jpg";
                             display: flex;
                             justify-content: center;
                             padding: 20px;
-                            border: solid 10px #eee;
-                            margin-right: 30px;
+                            border: solid 7px #eee;
                         
                             & .img-book {
                                 width: 250px;
-                                height: 400px;
+                                height: 300px;
                                 box-shadow: 2px 4px 8px 2px #0009;
                             }
                         }
@@ -208,8 +220,8 @@ import bastaDeMi from "@/assets/basta-ya-de-mi.jpg";
                 }
                 
                 & .invitation-text {
-                    width: 700px;
-                    font-size: 1.3rem;
+                    width: 100%;
+                    font-size: 1rem;
 
                     & > p:last-child {
                         font-weight: bold;
