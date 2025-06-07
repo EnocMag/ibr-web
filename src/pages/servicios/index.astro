@@ -113,11 +113,11 @@ import bastaDeMi from "@/assets/basta-ya-de-mi.jpg";
 
 
         & .container {
-            width: 600px;
-            height: 800px;
+            width: var(--base-width);
+            height: var(--base-height);
             margin: 0 auto;
             background: var(--primary-100);
-            border-radius: 10px;
+            border-radius: calc(var(--unit) * 1.5);
             display: flex;
             flex-direction: column;
             position: relative;
@@ -128,10 +128,10 @@ import bastaDeMi from "@/assets/basta-ya-de-mi.jpg";
                 position: absolute;
                 z-index: -2;
                 right: 0;
-                transform: translate(265px, -2px);
+                transform: translate(calc(var(--unit) * 34), -2px);
                 
                 & .padre-hijo {
-                    height: 600px;
+                    height: calc(var(--unit) * 102);
                 }
                 
             }
@@ -140,44 +140,44 @@ import bastaDeMi from "@/assets/basta-ya-de-mi.jpg";
                 position: absolute;
                 z-index: -2;
                 right: 0;
-                transform: translate(120px, -95px);
+                transform: translate(calc(var(--unit) * 20), calc(var(--unit) * -15.8));
 
                 & .girl-mirror {
-                    height: 720px;
+                    height: calc(var(--unit) * 120);
                 }
             }
             
             &::before {
                 content: "";
-                width: 600px;
-                height: 750px;
+                width: var(--base-width);
+                height: calc(var(--unit) * 125);
                 position: absolute;
                 background: #eee;
-                transform: rotate(-25deg) translate(-130px, 0px);
+                transform: rotate(-25deg) translate(calc(var(--unit) * -21.6), 0);
                 z-index: -1;
             }
             
             & .wrapper {
-                margin-top: 60px;
-                padding: 40px;
+                margin-top: calc(var(--unit) * 10);
+                padding: calc(var(--unit) * 6.66);
+
                 
                 & .title {
-                    font-size: 1.5rem;
+                    font-size: calc(var(--unit) * 4);
                     color: #fff;
                     background: #111;
                     display: inline-block;
-                    padding: 3px 8px;
+                    padding: calc(var(--unit) * 0.5) calc(var(--unit) * 1.33);
                 }
                 & .info-event {
                 
                     & .book-name {
-                        font-size: 3rem;
+                        font-size: calc(var(--unit) * 8);
                         font-weight: bold;
-                        width: 300px;
-                        line-height: .8;
-                        padding: 15px 0;
-                        margin: 0;
-                        margin-top: 10px;
+                        width: calc(var(--unit) * 50);
+                        line-height: 0.8;
+                        padding: calc(var(--unit) * 2.5) 0;
+                        margin-top: calc(var(--unit) * 1.5);
                     }
                     & .wrapper-event-date {
                         display: flex;
@@ -187,32 +187,32 @@ import bastaDeMi from "@/assets/basta-ya-de-mi.jpg";
                             display: flex;
                             flex-direction: column;
                             justify-content: center;
-                            gap: 20px;
+                            gap: calc(var(--unit) * 2);
                         
                             & .day {
-                                font-size: 1.5rem;
+                                font-size: calc(var(--unit) * 3);
                                 font-weight: bold;
                             }
                             & .hour {
                                 color: var(--primary-400);
-                                font-size: 2.5rem;
+                                font-size: calc(var(--unit) * 5);
                                 font-weight: bold;
                             }
                             & .place {
                                 font-weight: bold;
-                                font-size: 1.5rem;
+                                font-size: calc(var(--unit) * 4);
                             }
                         }
                     
                         & .wrapper-img {
                             display: flex;
                             justify-content: center;
-                            padding: 20px;
-                            border: solid 7px #eee;
+                            padding: calc(var(--unit) * 4);
+                            border: solid calc(var(--unit) * 1.5) #eee;
                         
                             & .img-book {
-                                width: 250px;
-                                height: 300px;
+                                width: calc(var(--unit) * 41.66);  /* 250px */
+                                height: calc(var(--unit) * 50);   
                                 box-shadow: 2px 4px 8px 2px #0009;
                             }
                         }
@@ -221,13 +221,19 @@ import bastaDeMi from "@/assets/basta-ya-de-mi.jpg";
                 
                 & .invitation-text {
                     width: 100%;
-                    font-size: 1rem;
+                    font-size: calc(var(--unit) * 2.8);
 
                     & > p:last-child {
                         font-weight: bold;
                     }
                 }
             }
+        }
+    }
+    @media screen and (max-width: 990px) {
+        :root {
+            --base-width: 90vw;
+            --base-height: calc(var(--base-width) * 1.33); /* mantiene proporción 600x800 */
         }
     }
 
