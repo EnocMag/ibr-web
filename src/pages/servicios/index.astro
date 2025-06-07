@@ -5,7 +5,6 @@ import NavBar from "@/components/NavBar.astro";
 import { Image } from "astro:assets";
 import mandatoMImg from "@/assets/el-mandato-masculino.jpg";
 import bastaDeMi from "@/assets/basta-ya-de-mi.jpg";
-import padreHijo from "@/assets/padre-hijo.png";
 ---
 
 <style>
@@ -100,74 +99,11 @@ import padreHijo from "@/assets/padre-hijo.png";
         align-items: center;
         gap: 20px;
 
-        & .event {
-            width: 900px;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 20px;
-            background: #fff;
-            border-radius: 10px;
-
-            & .event-title {
-                font-size: 35px;
-            }
-
-            & .event-container {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                gap: 20px;
-
-                
-                & .event-content {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    
-                    & .event-date {
-                        color: var(--primary-100);
-                        background: var(--primary-400);
-                        padding: 10px;
-                        margin: 10px;
-                        border-radius: 10px;
-                    }
-                    
-                    & .event-theme {
-                        display: flex;
-                        justify-content: space-between;
-                        align-items: center;
-                        gap: 10px;
-
-                        & .img-event {
-                            width: 300px;
-                            height: 450px;
-                            border-radius: 10px;
-                            align-self: start;
-                        }
-    
-                        & .event-info {
-                            /* margin-block: 1lh; */
-    
-                            & p {
-                                margin: 5px;
-                            }
-                            
-                            & > p:last-of-type {
-                                font-weight: bold;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-
         & .container {
             width: 800px;
             height: 1000px;
             margin: 0 auto;
-            background: #FFD580;
+            background: var(--primary-100);
             border-radius: 10px;
             display: flex;
             flex-direction: column;
@@ -245,7 +181,7 @@ import padreHijo from "@/assets/padre-hijo.png";
                                 font-weight: bold;
                             }
                             & .hour {
-                                color: #fd8218;
+                                color: var(--primary-400);
                                 font-size: 2.5rem;
                                 font-weight: bold;
                             }
@@ -273,7 +209,11 @@ import padreHijo from "@/assets/padre-hijo.png";
                 
                 & .invitation-text {
                     width: 700px;
-                    font-size: 1.5rem;
+                    font-size: 1.3rem;
+
+                    & > p:last-child {
+                        font-weight: bold;
+                    }
                 }
             }
         }
@@ -321,60 +261,6 @@ import padreHijo from "@/assets/padre-hijo.png";
     </div>
 
     <div class="church-calendar">
-
-        <section class="event">
-            <h2 class="event-title">Próxima reunión de hombres</h2>
-
-            <div class="event-container">
-                
-                <div class="event-content">
-                    <div class="event-date">
-                        <p><strong>Fecha:</strong> Sábado 7 de Junio</p>
-                        <p><strong>Hora:</strong> 7:00 pm</p>
-                        <p><strong>Lugar:</strong> Iglesia Bautista Reformada</p>
-                    </div>
-                    
-                    <div class="event-theme">
-                        <Image class="img-event" src={mandatoMImg} alt="portada del libro El mandato masculino" width={300} height={450}></Image>
-                        
-                        <div class="event-info">
-                            <p>En un mundo a menudo confundido sobre lo que significa ser un hombre, la Biblia nos ofrece una visión clara y sólida. Este libro, basado firmemente en la Escritura, nos lleva de regreso a Génesis 2 para entender la identidad y el propósito del hombre.</p>
-                            <p>Descubriremos que el corazón del llamado bíblico para el hombre es el mandato de "cultivar y cuidar", que es simple en esencia pero desafiante en la práctica.</p>
-                            <p>Estudiando juntos, buscaremos ganar claridad, crecer en obediencia, vivir de manera fructífera para la gloria de Dios y prepararnos para escuchar las benditas palabras: "Bien, siervo bueno y fiel".</p>
-                            <p>¡No se pierdan esta oportunidad de profundizar en el llamado sagrado de Dios para los hombres y ser desafiados a vivir como hombres de Dios!</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="event">
-            <h2 class="event-title">Próxima reunión de mujeres</h2>
-
-            <div class="event-container">
-                
-                <div class="event-content">
-                    <div class="event-date">
-                        <p><strong>Fecha:</strong> Sábado 14 de Junio</p>
-                        <p><strong>Hora:</strong> 5:00 pm</p>
-                        <p><strong>Lugar:</strong> Iglesia Bautista Reformada</p>
-                    </div>
-
-                    <div class="event-theme">
-                        <Image class="img-event" src={bastaDeMi} alt="portada del libro Basta ya de mi" width={300} height={450}></Image>
-            
-                        <div class="event-info">
-                            <p>¿Alguna vez te sientes cansada, abrumada o simplemente decepcionada con lo que la vida te ha dado? En esta época, innumerables voces nos dicen: "Cree en ti misma... alcanza tu potencial... encuentra tu propósito...". El mundo nos invita a desear más, hacer más y a ser más, y a menudo nos enfocamos tanto en nosotras mismas que nos sentimos insuficientes o vacías.</p>
-                            <p>Pero hay un mensaje diferente, un mensaje que es deliciosamente contracultural y que realmente necesitamos. Te invitamos a nuestra próxima reunión para explorar el libro "¡Basta ya de mí!" de Jen Oshman.</p>
-                            <p>Este libro nos ayuda a apartar nuestra mirada de nosotras mismas y a encontrar nuestra vida en Jesús, el Dador de todo don bueno y perfecto. Nos recuerda poderosamente que el gozo verdadero y duradero solo se encuentra en Él.</p>
-                            <p>"¡Basta ya de mí!" tiene un mensaje claro: tu vida no tiene que ver, en última instancia o profundamente, contigo, sino con Aquel que te ha hecho suyo. Nos llama a arraigarnos, edificarnos y establecernos en Cristo para encontrar la alegría abundante que Jesús prometió.</p>
-                            <p>¡Te esperamos para explorar juntas este mensaje transformador y encontrar el descanso y la alegría en Jesús!</p>
-                        </div>
-                    </div>
-                    
-                </div>
-            </div>
-        </section>
 
         <section>
             
