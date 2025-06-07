@@ -8,18 +8,6 @@ const { title } = Astro.props;
 const { items = [] }: { items?: MenuItem[] } = Astro.props;
 ---
 <style>
-    .wrapper-dropdown a {
-        color: #000;
-        padding: 10px 20px;
-        text-decoration: none;
-        border-radius: 5px;
-
-        &:hover {
-            background: #ddca92;
-            border-radius: 5px;
-            color: #524a32;
-        }
-    }
 
     /* Menú desplegable */
     .dropdown {
@@ -50,8 +38,8 @@ const { items = [] }: { items?: MenuItem[] } = Astro.props;
     }
 
     .wrapper-dropdown:hover .dropdown {
-        background: #ddca92;
-        color: #524a32;
+        background: var(--primary-100);
+        color: var(--primary-500);
     }
 </style>
 

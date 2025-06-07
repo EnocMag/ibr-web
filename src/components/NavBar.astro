@@ -1,8 +1,5 @@
 ---
 import ButtonDropdown from "@/components/ButtonDropdown.astro";
-import Logoface from '../assets/facebook.svg';
-import LogoYouTube from '../assets/youtube.svg';
-import LogoInstagram from '../assets/instagram.svg';
 
 import { Image } from "astro:assets";
 import logoIBR from "@/assets/Logo-IBR.jpg";
@@ -65,9 +62,9 @@ const menuItemsEscuelaDominical = [
                     border-radius: 5px;
 
                     &:hover {
-                        background: var(--nav-bg-hover);
+                        background: var(--primary-100);
                         border-radius: 5px;
-                        color: var(--nav-bg-hover-text);
+                        color: var(--primary-500);
                     } 
                 }
             }
@@ -90,6 +87,7 @@ const menuItemsEscuelaDominical = [
                         height: 4px;
                         background-color: var(--primary-500);
                         border-radius: 4px;
+                        transform: rotate(180deg);
                         transition: transform 0.3s ease;
                     }
                     
@@ -99,6 +97,7 @@ const menuItemsEscuelaDominical = [
                         top: 8px;
                     }
                     &.open div:nth-child(2) {
+                        transform: rotate(45deg);
                         opacity: 0;
                     }
                     &.open div:nth-child(3) {
