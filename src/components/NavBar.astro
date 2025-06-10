@@ -6,14 +6,14 @@ import logoIBR from "@/assets/Logo-IBR.jpg";
 
 // Button dropdown items
 const menuItemsNosotros = [ 
-  { label: 'Historia', href: '/' },
-  { label: 'Misión', href: '/' },
-  { label: 'Visión', href: '/' },
-  { label: 'Credo', href: '/' }
+  { label: 'Historia', href: '/ibr-web/' },
+  { label: 'Misión', href: '/ibr-web/' },
+  { label: 'Visión', href: '/ibr-web/' },
+  { label: 'Credo', href: '/ibr-web/' }
 ];
 const menuItemsEscuelaDominical = [ 
-  { label: 'Recursos', href: '/escuela-dominical/resources' },
-  { label: 'Articulos', href: '/' }
+  { label: 'Recursos', href: '/ibr-web/escuela-dominical/resources' },
+  { label: 'Articulos', href: '/ibr-web/' }
 ];
 ---
 
@@ -150,17 +150,17 @@ const menuItemsEscuelaDominical = [
     <nav class="top-bar">
 
         <div class="icon-container">
-            <a href="/" class="icon-nav">
+            <a href="/ibr-web/" class="icon-nav">
                 <Image src={logoIBR} alt="Logo de la iglesia" class="logo"/>
             </a>
         </div>
 
         <div class="list-menu">
-            <a href="/">Inicio</a>
-            <ButtonDropdown title="Nosotros" items={menuItemsNosotros} href="/nosotros"></ButtonDropdown>
+            <a href="/ibr-web/">Inicio</a>
+            <ButtonDropdown title="Nosotros" items={menuItemsNosotros} href="/ibr-web/nosotros"></ButtonDropdown>
             <a href="/ibr-web/servicios/">Servicios</a>
-            <ButtonDropdown title="Escuela Dominical" items={menuItemsEscuelaDominical} href="/escuela-dominical"></ButtonDropdown> 
-            <a href="/#ubicacion">Ubicación</a> <!-- TODO dar nuevo link -->
+            <ButtonDropdown title="Escuela Dominical" items={menuItemsEscuelaDominical} href="/ibr-web/escuela-dominical"></ButtonDropdown> 
+            <a href="/ibr-web/#ubicacion">Ubicación</a> <!-- TODO dar nuevo link -->
         </div>
 
         <div class="dropdown-menu">
@@ -176,11 +176,11 @@ const menuItemsEscuelaDominical = [
 
 <div id="mobile-menu" class="mobile-menu">
     <div class="list-menu-mobile">
-        <a href="/">Inicio</a>
-        <a id="item-menu" href="/nosotros">Nosotros</a>
-        <a id="item-menu" href="/servicios">Servicios</a>
-        <a id="item-menu" href="/escuela-dominical">Escuela Dominical</a>
-        <a id="item-menu" href="/">Contactanos</a>
+        <a href="/ibr-web/">Inicio</a>
+        <a id="item-menu" href="/ibr-web/nosotros">Nosotros</a>
+        <a id="item-menu" href="/ibr-web/servicios">Servicios</a>
+        <a id="item-menu" href="/ibr-web/escuela-dominical">Escuela Dominical</a>
+        <a id="item-menu" href="/ibr-web/">Contactanos</a>
         <!-- <a href="">Contactanos</a> -->
     </div>
 </div>
