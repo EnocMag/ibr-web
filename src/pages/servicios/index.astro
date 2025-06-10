@@ -5,6 +5,8 @@ import NavBar from "@/components/NavBar.astro";
 import { Image } from "astro:assets";
 import mandatoMImg from "@/assets/el-mandato-masculino.jpg";
 import bastaDeMi from "@/assets/basta-ya-de-mi.jpg";
+import fatherAndSon from "@/assets/padre-hijo.png"
+import girlMirror from "@/assets/girlinthemirror.png";
 ---
 
 <style>
@@ -284,7 +286,8 @@ import bastaDeMi from "@/assets/basta-ya-de-mi.jpg";
             
             <div class="container">
                 <div class="thematic-image-man">
-                    <img class="padre-hijo" src="/ibr-web/src/assets/padre-hijo.png" alt="Padre e hijo cultivando">
+                    <Image class="padre-hijo" src={fatherAndSon} alt="Padre e hijo cultivando" width={767} height={798} ></Image>
+                    <!-- <img class="padre-hijo" src="/ibr-web/src/assets/padre-hijo.png" alt="Padre e hijo cultivando"> -->
                 </div>
 
                 <div class="wrapper">
@@ -317,7 +320,8 @@ import bastaDeMi from "@/assets/basta-ya-de-mi.jpg";
             
             <div class="container">
                 <div class="thematic-image-women">
-                    <img class="girl-mirror" src="/ibr-web/src/assets/girlinthemirror.png" alt="Padre e hijo cultivando">
+                    <Image class="girl-mirror" src={girlMirror} alt="Chica en el espejo" width={549} height={970}></Image>
+                    <!-- <img class="girl-mirror" src="/ibr-web/src/assets/girlinthemirror.png" alt="Chica en el espejo"> -->
                 </div>
 
                 <div class="wrapper">
