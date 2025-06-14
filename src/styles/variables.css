@@ -1,6 +1,7 @@
 :root {
-    --general-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    --general-font-family: CormorantGaramond-Regular, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial;
     --general-font-size: 16px;
+    --nb-font-size: 19px;
     --bg-color: #f0f0f0;
 
     --text: #333;

@@ -25,28 +25,46 @@ import BtnScrollTop from "@/components/BtnScrollTop.astro";
 <style is:global>
 	/* Base styles for the site */
 		
-		body {
-			font-family: var(--general-font-family);
-			font-size: var(--general-font-family);
-			color: var(--text);
-			background-color: var(--bg-color);
-		}
-		p {
-			margin-block: 1lh;
-		}
-		/* Estilo de todos lo titulos de cada página */
-		.title-container {
-			display: flex;
-			justify-content: center;
-			background: var(--astro-background-color);
-			padding: 0 0 50px;
-			font-size: 1.5rem;
+	body {
+		font-family: var(--general-font-family);
+		font-size: var(--general-font-size);
+		color: var(--text);
+		background-color: var(--bg-color);
+	}
+	p {
+		margin-block: 1lh;
+	}
+	/* Estilo de todos lo titulos de cada página */
+	.title-container {
+		display: flex;
+		justify-content: center;
+		background: var(--astro-background-color);
+		padding: 0 0 50px;
+		font-size: 1.5rem;
 
-			& h1 {
-				margin-top: 100px;
-			}
+		& h1 {
+			margin-top: 100px;
 		}
-		.title-container {
-		}
+	}
+		
+@font-face {
+    font-family: EBGaramond-regular;
+    src: 
+    url("fonts/EBGaramond-Regular.woff2") format("woff2"),
+    url("fonts/EBGaramond-Regular.ttf") format("truetype")
+}
+
+@font-face {
+    font-family: EBGaramond-medium;
+    src:
+    url("fonts/EBGaramond-Medium.woff2") format("woff2"),
+    url("fonts/EBGaramond-Medium.ttf") format("truetype")
+}
+@font-face {
+    font-family: CormorantGaramond-Regular;
+    src:
+    url("fonts/CormorantGaramond-Regular.woff2") format("woff2"),
+    url("fonts/CormorantGaramond-Regular.ttf") format("truetype")
+}
 
 </style>
